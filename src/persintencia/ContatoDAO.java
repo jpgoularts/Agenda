@@ -8,9 +8,12 @@ import java.util.List;
 
 public class ContatoDAO implements IContatoDAO {
 
+    static String url = "C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda2/dados.txt";
+    static String urltemp = "C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda2/dados-temp.txt";
+
     @Override
     public void salvar(Contato c) {
-        File arquivo = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda2/dados.txt");
+        File arquivo = new File(url);
         try {
             if(!arquivo.exists()) {
                 arquivo.createNewFile();
@@ -29,8 +32,8 @@ public class ContatoDAO implements IContatoDAO {
 
     @Override
     public void atualizar(Contato c) throws FileNotFoundException {
-        File arquivo = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda/dados.txt");
-        File arquivoTemp = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda/dados-temp.txt");
+        File arquivo = new File(url);
+        File arquivoTemp = new File(urltemp);
 
         String linha;
         String[] newlinha;
@@ -67,8 +70,8 @@ public class ContatoDAO implements IContatoDAO {
 
     @Override
     public void deletar(int id) {
-        File arquivo = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda2/dados.txt");
-        File arquivoTemp = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda2/dados-temp.txt");
+        File arquivo = new File(url);
+        File arquivoTemp = new File(urltemp);
 
         String linha;
         String[] newlinha;
@@ -99,8 +102,8 @@ public class ContatoDAO implements IContatoDAO {
 
     @Override
     public void getById(int id) {
-        File arquivo = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda/dados.txt");
-        File arquivoTemp = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda/dados-temp.txt");
+        File arquivo = new File(url);
+        File arquivoTemp = new File(urltemp);
 
         String linha;
         String[] newlinha;
@@ -128,7 +131,7 @@ public class ContatoDAO implements IContatoDAO {
 
     @Override
     public List<Contato> getAll() {
-        File arquivo = new File("C:/Users/joaop/OneDrive/Área de Trabalho/Java/Agenda/dados.txt");
+        File arquivo = new File(url);
         String linha;
 
         ArrayList<String> agenda = new ArrayList();
