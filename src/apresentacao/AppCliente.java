@@ -14,22 +14,22 @@ public class AppCliente {
         Contato f = new Contato(4, "Otavio","Ferreira","teste@email.com","(21) 98765-4321","Família");
 
         IContatoDAO dao = new ContatoDAO();
-        dao.salvar(c);
-        dao.salvar(d);
-        dao.salvar(e);
+        //dao.salvar(c);
+        //dao.salvar(d);
+        //dao.salvar(e);
 
 
-        e.nome = "Felipe";
-        d.nome = "Aldo";
-        dao.atualizar(d);
+        //e.nome = "Felipe";
+        //d.nome = "Aldo";
+        //dao.atualizar(d);
 
-        dao.getById(2);
+        //dao.getById(3);
 
         dao.getAll();
 
-        dao.deletar(2);
+        //dao.deletar(2);
 
-        dao.salvar(f);
+        //dao.salvar(f);
 
     }
 }
